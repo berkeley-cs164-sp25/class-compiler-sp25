@@ -54,7 +54,7 @@ let copy_runtime runtime_file runtime_text =
 
 let link object_file runtime_file binary_file =
   let disable_pie = if macos () then "-Wl,-no_pie" else "-no-pie" in
-  run "gcc" ["-arch"; "x86_64"; disable_pie; object_file; runtime_file; "-o"; binary_file]
+  run "gcc" [disable_pie; object_file; runtime_file; "-o"; binary_file]
   |> ignore
 
 let remove_object_files object_file runtime_file =
