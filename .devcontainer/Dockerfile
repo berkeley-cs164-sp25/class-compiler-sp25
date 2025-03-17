@@ -41,5 +41,3 @@ RUN opam init --disable-sandboxing -y && eval $(opam env)
 # The '.' tells opam to use the current directory, which should contain your dune-project file.
 RUN opam pin add -y . && opam install . --deps-only --with-test --with-doc
 
-# Install Dev Dependencies 
-RUN opam switch import switch-state.export
