@@ -1,0 +1,8 @@
+{
+  "name": "CS 164 Class Compiler Development Environment",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "remoteUser": "vscode"
+}
